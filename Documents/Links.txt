@@ -1,0 +1,14 @@
+https://medium.com/revista-dtar/como-verificar-a-cobertura-de-testes-da-api-rest-9e2f745564b
+
+https://www.devmedia.com.br/asp-net-web-api-implementando-servicos-restful/31024
+
+https://developer.okta.com/blog/2018/07/27/build-crud-app-in-aspnet-framework-webapi-and-angular
+
+https://dotnet.microsoft.com/en-us/apps/aspnet/apis
+
+https://www.c-sharpcorner.com/article/creating-an-angular-app-in-visual-studio-2019/
+
+https://www.c-sharpcorner.com/article/microservice-using-asp-net-core/
+
+https://www.macoratti.net/16/06/webapi_cons1.htm
+https://www.macoratti.net/16/06/webapi_cons2.htm
