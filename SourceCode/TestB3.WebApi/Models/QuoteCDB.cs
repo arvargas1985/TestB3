@@ -20,6 +20,8 @@
 
         public decimal? BruteResult { get; set; }
 
+        public decimal? Taxes { get; set; }
+
         public decimal? LiquidResult { get; set; }
     }
 }

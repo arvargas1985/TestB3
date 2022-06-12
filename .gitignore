@@ -2,3 +2,7 @@
 /SourceCode/TestB3.WebApi/obj/Debug
 /SourceCode/TestB3.WebApi.Tests/bin/Debug
 /SourceCode/TestB3.WebApi.Tests/obj/Debug/
+/SourceCode/TestB3.WebApi.Tests/bin
+/SourceCode/.vs
+/SourceCode/.vs/TestB3/v16/.suo
+/SourceCode/.vs/TestB3/v16/Server/sqlite3/storage.ide
