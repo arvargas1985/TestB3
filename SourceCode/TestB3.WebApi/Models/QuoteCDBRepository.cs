@@ -7,22 +7,28 @@
 
     public class QuoteCDBRepository : IQuoteCDBRepository
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="quoteCDB"></param>
+        /// <returns></returns>
         public QuoteCDB Calculate(QuoteCDB quoteCDB)
         {
             decimal initialValue = quoteCDB.Value;
             decimal finalValue = 0m;
-            decimal taxes = this.GetTaxFromQuantityMonths(
+            decimal percentageTaxes = this.GetTaxPercentage(
                 quoteCDB.QuantityMonths);
 
             for (int i = 1; i < quoteCDB.QuantityMonths; i++)
+            //for (int i = 0; i < quoteCDB.QuantityMonths; i++)
             {
                 finalValue = initialValue * (1 + (Constants.CDI * Constants.TB));
 
                 initialValue = finalValue;
             }
 
-            taxes = Math.Round(
-                finalValue * taxes,
+            decimal valueTaxes = Math.Round(
+                finalValue * percentageTaxes,
                 2,
                 MidpointRounding.AwayFromZero);
 
@@ -31,14 +37,19 @@
                 2,
                 MidpointRounding.AwayFromZero);
 
-            quoteCDB.Taxes = taxes;
+            quoteCDB.Taxes = valueTaxes;
 
             quoteCDB.LiquidResult = quoteCDB.BruteResult - quoteCDB.Taxes;
 
             return quoteCDB;
         }
 
-        private decimal GetTaxFromQuantityMonths(int quantityMonths)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="quantityMonths"></param>
+        /// <returns></returns>
+        private decimal GetTaxPercentage(int quantityMonths)
         {
             if (quantityMonths > 6 && quantityMonths <= 12)
             {

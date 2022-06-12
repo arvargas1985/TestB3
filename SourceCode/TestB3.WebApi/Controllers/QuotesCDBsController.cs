@@ -50,11 +50,13 @@
             {
                 if (!ModelState.IsValid)
                 {
-                    return BadRequest(ModelState);
+                    return BadRequest(
+                        ModelState);
                 }
                 else
                 {
-                    QuoteCDB result = this._quoteCDBRepository.Calculate(quoteCDB);
+                    QuoteCDB result = this._quoteCDBRepository.Calculate(
+                        quoteCDB);
 
                     return Ok(
                         result);
