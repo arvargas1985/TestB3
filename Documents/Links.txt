@@ -12,3 +12,10 @@ https://www.c-sharpcorner.com/article/microservice-using-asp-net-core/
 
 https://www.macoratti.net/16/06/webapi_cons1.htm
 https://www.macoratti.net/16/06/webapi_cons2.htm
+
+https://stackoverflow.com/questions/686571/why-does-assert-isinstanceoftype0-gettype-typeofint-fail
+
+https://stackoverflow.com/questions/30002936/how-to-get-the-object-from-httpactionresult-ok-method-web-api
+
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
+

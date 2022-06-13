@@ -1,10 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
-
-namespace TestB3.WebApi
+﻿namespace TestB3.WebApi
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Http;
+    using Microsoft.Practices.Unity;
+    using TestB3.WebApi.Models;
+    using Unity.WebApi;
+
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)

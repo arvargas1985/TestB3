@@ -10,26 +10,47 @@
     {
         private const string MESSAGE_NOT_IMPLEMENTED_EXCEPTION = "The Http Verb {0} is not implemented!";
 
-        private readonly IQuoteCDBRepository _quoteCDBRepository = new QuoteCDBRepository();
+        private readonly IQuoteCDBRepository _quoteCDBRepository = null;
+
+        public QuotesCDBsController(IQuoteCDBRepository quoteCDBRepository)
+        {
+            this._quoteCDBRepository = quoteCDBRepository;
+        }
+
+        public IQuoteCDBRepository QuoteCDBRepository { get; private set; }
 
         [HttpGet]
         public IHttpActionResult GetCDB(int id)
         {
-            var cdbs = new string[] { id.ToString(), id.ToString(), id.ToString() };
+            //var cdbs = new string[] { id.ToString(), id.ToString(), id.ToString() };
 
-            //return Content(HttpStatusCode.Found, cdbs);
+            ////return Content(HttpStatusCode.Found, cdbs);
 
-            return Ok(cdbs);
+            //return Ok(cdbs);
+
+            return InternalServerError(
+                new NotImplementedException(
+                    string.Format(
+                        CultureInfo.InvariantCulture,
+                        MESSAGE_NOT_IMPLEMENTED_EXCEPTION,
+                        "GET{id}")));
         }
 
         [HttpGet]
         public IHttpActionResult GetCDBs()
         {
-            var cdbs = new string[] { "Hello", "World", "!" };
+            //var cdbs = new string[] { "Hello", "World", "!" };
 
-            //return Content(HttpStatusCode.Found, cdbs);
+            ////return Content(HttpStatusCode.Found, cdbs);
 
-            return Ok(cdbs);
+            //return Ok(cdbs);
+
+            return InternalServerError(
+                new NotImplementedException(
+                    string.Format(
+                        CultureInfo.InvariantCulture,
+                        MESSAGE_NOT_IMPLEMENTED_EXCEPTION,
+                        "GET")));
         }
 
         [HttpDelete()]
