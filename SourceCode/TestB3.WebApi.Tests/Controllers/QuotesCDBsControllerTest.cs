@@ -21,9 +21,11 @@
         public QuotesCDBsControllerTest()
         {
             var serviceCollection = new ServiceCollection();
+
             serviceCollection.AddTransient<IQuoteCDBRepository, QuoteCDBRepository>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
+
             this._quoteCDBRepository = serviceProvider.GetService<IQuoteCDBRepository>();
         }
 
@@ -91,9 +93,8 @@
         public void PostCDB_ShouldThrowException()
         {
             // Arrange
-            QuotesCDBsController controller = new QuotesCDBsController(this._quoteCDBRepository);
-
-            controller.ModelState.AddModelError("null", "null");
+            QuotesCDBsController controller = new QuotesCDBsController(
+                this._quoteCDBRepository);
 
             // Act
             var model = new QuoteCDB
@@ -102,8 +103,9 @@
                 Value = 0m,
             };
 
-            // Assert
-            // Act
+            controller.Configuration = new HttpConfiguration();
+            controller.Validate(model);
+
             var response = controller.PostCDB(model);
 
             // Assert
