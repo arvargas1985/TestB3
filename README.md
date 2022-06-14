@@ -5,12 +5,12 @@ Esse documento visa informar as instruções para execução e testes da soluç�
 A solution está versionada em repositório público no GitHub sob a URL https://github.com/arvargas1985/TestB3.git. Para o desenvolvimento da WebApi e Tests foi utilizado o Microsoft .Net Framework 4.7.2
 
 Os testes unitários da **TestB3.WebApi** (WebApi) podem ser encontrados na Solution **TestB3.sln** (\TestB3\SourceCode). Eles estão com o nome **TestB3.WebApi.Tests**, conforme imagem abaixo:
-![plot](documents/01.png).
+![plot](./documents/01.png).
 
 O testes seguiram os padrões MSTest (Microsoft.VisualStudio.TestTools.UnitTesting) com Injection Dependency (Microsoft.Extensions.DependencyInjection).
 
 Para testes manuais deve-se usar o Postman para a chamada da WebApi. Inicialmente, antes de invocar a WebApi pelo Postman, é importante ressaltar que o projeto **TestB3.WebApi** deve estar rodando (modo Debug ou Release). A URL que deve ser informada no Postman para testar a WebApi é **https://localhost:44353/api/quotescdbs**, método POST, conforme imagem abaixo:
-![plot](documents/02.png)
+![plot](./documents/02.png)
 
 # Críticas
 
