@@ -15,6 +15,9 @@
     {
         private readonly IQuoteCDBRepository _quoteCDBRepository = null;
 
+        /// <summary>
+        /// Você obtém um desses por método de teste.
+        /// </summary>
         public QuotesCDBsControllerTest()
         {
             var serviceCollection = new ServiceCollection();
@@ -22,6 +25,20 @@
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             this._quoteCDBRepository = serviceProvider.GetService<IQuoteCDBRepository>();
+        }
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            //this._pedidoOperacao = new Pedido.Operacao();
+            //this._pedidoOperacaoAtacado = new Pedido.Operacao.Atacado();
+        }
+
+        [TestCleanup]
+        public void Cleanup()
+        {
+            //this._quoteCDBRepository.Dispose();
+            //this._quoteCDBRepository = null;
         }
 
         [TestMethod]

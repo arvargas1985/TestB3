@@ -19,3 +19,4 @@ https://stackoverflow.com/questions/30002936/how-to-get-the-object-from-httpacti
 
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 
+https://www.c-sharpcorner.com/article/consuming-asp-net-web-api-in-angular-part-four/
